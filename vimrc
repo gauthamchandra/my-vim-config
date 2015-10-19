@@ -18,6 +18,7 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'scrooloose/nerdtree' 
 Plugin 'scrooloose/syntastic'
+Plugin 'rking/ag.vim'
 
 " All Vundle plugins should be before this!
 call vundle#end()
@@ -113,3 +114,7 @@ let g:JSHintHighlightErrorLine = 0
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
+"
+
+" For AG
+let g:ag_working_path_mode="r"
