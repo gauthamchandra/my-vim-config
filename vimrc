@@ -19,6 +19,8 @@ Plugin 'wookiehangover/jshint.vim'
 Plugin 'scrooloose/nerdtree' 
 Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'airblade/vim-gitgutter'
 
 " All Vundle plugins should be before this!
 call vundle#end()
