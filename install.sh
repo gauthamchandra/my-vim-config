@@ -11,4 +11,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "Installing Plugins..."
 vim +PluginInstall +qall
 
+echo "Setting vimrc as executable"
+chmod +x vimrc
+
 echo "Done."
