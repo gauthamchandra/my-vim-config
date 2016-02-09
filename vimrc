@@ -1,6 +1,4 @@
 " My Beloved Vimrc file.
-" Disable any distro specific upgrades
-set nocompatible
 
 " enable clipboard register
 set clipboard=unnamed
@@ -15,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ngmy/vim-rubocop'
-Plugin 'wookiehangover/jshint.vim'
 Plugin 'scrooloose/nerdtree' 
 Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
@@ -104,19 +101,23 @@ augroup END
 " Making sure it picks up Greenhouse rubocop config
 let g:vimrubocop_config = '/Users/gauthamchandra/development/greenhouse/.rubocop.yml'
 
+" let g:syntastic_eshint_exec = '/usr/local/bin/eslint.cmd'
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_vim_checkers = ['vint']
+
 " Make sure there isn't any annoying highlighting
 let g:JSHintHighlightErrorLine = 0
 
 " Some stuff to make Syntax checking more friendly
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " For AG
 let g:ag_working_path_mode="r"
