@@ -18,6 +18,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 
 " All Vundle plugins should be before this!
 call vundle#end()
@@ -120,4 +123,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " For AG
-let g:ag_working_path_mode="r"
+let g:ag_working_path_mode='r'
+
+" Let airline populate the powerline symbols
+let g:airline_powerline_fonts = 1
